@@ -4,16 +4,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:padding="15dp">
 
     <ImageView
         android:id="@+id/appImage"
-        android:layout_width="300dp"
-        android:layout_height="80dp"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
         android:layout_margin="50dp"
         android:layout_gravity="center"
         app:srcCompat="@drawable/app_image"
-        android:contentDescription="@string/app_name" />
+        android:background="@drawable/background"
+        android:backgroundTint="@color/black"
+        android:contentDescription="@string/app_name"/>
 
     <TextView
         android:id="@+id/registration"
@@ -25,45 +28,48 @@
         android:textColor="#000000"
         android:textColorHint="#000000"
         android:textSize="30sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"/>
 
     <EditText
         android:id="@+id/name"
         android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:layout_margin="16dp"
-        android:background="@color/white"
+        android:layout_height="50dp"
+        android:layout_margin="15dp"
+        android:background="@drawable/background"
+        android:padding="15dp"
         android:inputType="textPersonName"
         android:text="@string/hint_input_name"
-        android:importantForAutofill="no" />
+        android:importantForAutofill="no"/>
 
     <EditText
         android:id="@+id/email"
         android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:layout_margin="16dp"
-        android:background="@color/white"
+        android:layout_height="50dp"
+        android:layout_margin="15dp"
+        android:background="@drawable/background"
+        android:padding="15dp"
         android:inputType="textEmailAddress"
         android:text="@string/hint_input_email"
-        android:importantForAutofill="no" />
+        android:importantForAutofill="no"/>
 
     <EditText
         android:id="@+id/password"
         android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:layout_margin="16dp"
-        android:background="@color/white"
+        android:layout_height="50dp"
+        android:layout_margin="15dp"
+        android:background="@drawable/background"
+        android:padding="15dp"
         android:inputType="textPassword"
         android:text="@string/hint_input_pass"
-        android:importantForAutofill="no" />
+        android:importantForAutofill="no"/>
 
     <Button
         android:id="@+id/buttonRegistration"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:background="@color/black"
-        android:layout_margin="16dp"
+        android:backgroundTint="@color/black"
+        android:layout_margin="15dp"
         android:text="@string/text_reg_button"/>
 
     <TextView
@@ -71,6 +77,5 @@
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="@string/have_acc"
-        android:textColor="#5D4037" />
+        android:text="@string/have_acc"/>
 </LinearLayout>
