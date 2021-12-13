@@ -2,7 +2,7 @@
     <string name="app_name">Audiophile</string>
     <string name="splashscreen">HeadPhones</string>
     <string name="label_registration">Регистрация</string>
-    <string name="label_authorization">Вход</string>
+    <string name="label_authorization">Авторизация</string>
     <string name="hint_input_name">Имя</string>
     <string name="hint_input_email">E-mail</string>
     <string name="hint_input_pass">Пароль</string>
