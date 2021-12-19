@@ -105,9 +105,11 @@
         <Button
             android:id="@+id/buyItem"
             android:layout_width="175dp"
-            android:layout_height="40dp"
+            android:layout_height="30dp"
             android:layout_marginStart="5dp"
-            android:backgroundTint="@color/black"
+            android:background="@color/black"
+            android:textColor="@color/white"
+            android:paddingVertical="1dp"
             android:text="Купить"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@+id/imageShop"

@@ -51,9 +51,10 @@
     <Button
         android:id="@+id/buttonAuthorization"
         android:layout_width="300dp"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:layout_gravity="center"
-        android:backgroundTint="@color/black"
+        android:background="@color/black"
+        android:textColor="@color/white"
         android:layout_margin="16dp"
         android:text="@string/text_auth_button"/>
 
