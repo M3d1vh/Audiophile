@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Audiophile">
         <activity
-            android:name=".activity.HeadphonesActivity"
+            android:name=".fragments.HeadphonesFragment"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -18,13 +18,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.RegistrationActivity"/>
-        <activity android:name=".activity.AuthorizationActivity"/>
-        <activity android:name=".activity.ProfileActivity"/>
-        <activity android:name=".activity.ShopsActivity"/>
-        <activity android:name=".activity.ReviewsActivity"/>
-        <activity android:name=".activity.SplashActivity"/>
-        <activity android:name=".activity.ProductActivity"/>
+        <activity android:name=".fragments.RegistrationFragment"/>
+        <activity android:name=".fragments.AuthorizationFragment"/>
+        <activity android:name=".fragments.ProfileFragment"/>
+        <activity android:name=".fragments.ShopsFragment"/>
+        <activity android:name=".fragments.ReviewsFragment"/>
+        <activity android:name=".fragments.SplashFragment"/>
+        <activity android:name=".fragments.ProductFragment"/>
     </application>
 
 </manifest>
