@@ -9,7 +9,7 @@ import com.example.audiophile.databinding.FragmentProfileBinding
 
 class ProfileFragment : Fragment(R.layout.fragment_profile) {
     companion object{
-        fun NewInstance() = ProfileFragment()
+        fun newInstance() = ProfileFragment()
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)

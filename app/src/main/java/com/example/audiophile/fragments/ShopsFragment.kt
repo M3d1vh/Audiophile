@@ -13,7 +13,7 @@ import com.example.audiophile.databinding.FragmentShopsBinding
 
 class ShopsFragment : Fragment(R.layout.fragment_shops) {
     companion object{
-        fun NewInstance() = ShopsFragment()
+        fun newInstance() = ShopsFragment()
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -21,5 +21,8 @@ class ShopsFragment : Fragment(R.layout.fragment_shops) {
 
         binding.rvShops.layoutManager = LinearLayoutManager(requireContext())
         binding.rvShops.adapter = ShopAdapter(DataSource.Shops) {}
+        binding.imageClose.setOnClickListener {
+            (activity as MainActivity).navigateToFragment(ProductFragment.newInstance())
+        }
     }
 }

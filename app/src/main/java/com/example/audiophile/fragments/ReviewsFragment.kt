@@ -13,12 +13,19 @@ import com.example.audiophile.databinding.FragmentReviewsBinding
 
 class ReviewsFragment : Fragment(R.layout.fragment_reviews) {
     companion object{
-        fun NewInstance() = ReviewsFragment()
+        fun newInstance() = ReviewsFragment()
+    }
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val binding = FragmentReviewsBinding.bind(view)
         binding.rvReview.layoutManager = LinearLayoutManager(requireContext())
         binding.rvReview.adapter = ReviewAdapter(DataSource.Reviews) {}
+        binding.imageClose.setOnClickListener {
+            (activity as MainActivity).navigateToFragment(ProductFragment.newInstance())
+        }
     }
 }

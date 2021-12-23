@@ -8,7 +8,7 @@ import com.example.audiophile.databinding.FragmentRegistrationBinding
 
 class RegistrationFragment : Fragment(R.layout.fragment_registration) {
     companion object{
-        fun NewInstance() = RegistrationFragment()
+        fun newInstance() = RegistrationFragment()
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)

@@ -8,7 +8,7 @@ import com.example.audiophile.databinding.FragmentSplashscreenBinding
 
 class SplashFragment: Fragment(R.layout.fragment_splashscreen){
     companion object{
-        fun NewInstance() = SplashFragment()
+        fun newInstance() = SplashFragment()
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
