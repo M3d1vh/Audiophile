@@ -17,16 +17,6 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="SpeakableTextPresentCheck" />
 
-    <ImageButton
-        android:id="@+id/imageMenu"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="?selectableItemBackground"
-        android:minWidth="48dp"
-        android:minHeight="48dp"
-        android:src="@drawable/ic_menu"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
         android:id="@+id/imageSearch"
@@ -61,6 +51,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/searchString"
+        app:layout_constraintBottom_toBottomOf="parent"
         tools:itemCount="10"
-        tools:listitem="@layout/item_headpnone" />
+        tools:listitem="@layout/item_headpnone"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

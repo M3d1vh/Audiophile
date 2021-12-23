@@ -22,10 +22,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="Отзывы:"
+        android:text="Наименование товара"
         android:textColor="@color/black"
-        android:textSize="25sp"
+        android:textSize="24sp"
         android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/reviews_product_name" />
 
@@ -33,21 +34,22 @@
         android:id="@+id/reviews_product_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="Проводная гарнитура Logitech G Pro черный"
+        android:text="Где купить?"
         android:textColor="@color/black"
-        android:textSize="20sp"
+        android:textSize="36sp"
         android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageClose" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvReview"
+        android:id="@+id/rvShops"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginTop="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/reviews_product"
-        tools:itemCount="3"
-        tools:layout_editor_absoluteX="15dp"
-        tools:listitem="@layout/item_reviews" />
+        tools:itemCount="5"
+        tools:listitem="@layout/item_shop" />
 </androidx.constraintlayout.widget.ConstraintLayout>
