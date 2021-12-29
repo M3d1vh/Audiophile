@@ -47,8 +47,8 @@ class ReviewAdapter (
 
         fun bind(review: Review) {
             this.review = review
-            userName.text = review.userName
-            dateReview.text = review.Date
+            userName.text = review.User.name
+            dateReview.text = review.date
             useTime.text = review.useTime
             dignity.text = review.dignity
             limits.text = review.limits

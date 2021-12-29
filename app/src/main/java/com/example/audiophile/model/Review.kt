@@ -1,8 +1,11 @@
 package com.example.audiophile.model
 
+import kotlinx.serialization.Serializable
+
+@Serializable
 data class Review (
-    val userName : String,
-    val Date: String,
+    val User : User,
+    val date: String,
     val useTime: String,
     val dignity: String,
     val limits: String,

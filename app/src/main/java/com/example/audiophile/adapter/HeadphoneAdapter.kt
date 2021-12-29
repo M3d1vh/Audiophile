@@ -46,9 +46,8 @@ class HeadphoneAdapter (
 
         fun bind(headphone: Headphone) {
             this.headphone = headphone
-            nameProduct.text = headphone.model
+            nameProduct.text = headphone.model.nameModel
             descProduct.text = headphone.description
-            iconHP.setImageResource(headphone.im_modelID)
         }
     }
 }

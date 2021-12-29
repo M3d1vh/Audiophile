@@ -1,10 +1,10 @@
 package com.example.audiophile.model
 
-import androidx.annotation.DrawableRes
+import kotlinx.serialization.Serializable
 
+@Serializable
 data class Headphone(
-    @DrawableRes val im_modelID: Int,
-    val model: String,
+    val model: Product,
     val description: String
 )
 

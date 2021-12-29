@@ -7,30 +7,30 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.audiophile.R
-import com.example.audiophile.model.Shop
+import com.example.audiophile.model.Stores
 
-typealias OnShopClickListener = (Shop) -> Unit
+typealias OnShopClickListener = (Stores) -> Unit
 
-class ShopAdapter (
-    private val shops : List<Shop>,
+class StoresAdapter (
+    private val shops : List<Stores>,
     private val listener : OnShopClickListener,
-) : RecyclerView.Adapter<ShopAdapter.ShopsVH>() {
+) : RecyclerView.Adapter<StoresAdapter.StoresVH>() {
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ShopsVH {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): StoresVH {
         val layoutInflater = LayoutInflater.from(parent.context)
-        return ShopsVH(
+        return StoresVH(
             layoutInflater.inflate(R.layout.item_shop, parent, false),
             listener
         )
     }
 
-    override fun onBindViewHolder(holder: ShopsVH, position: Int) =
+    override fun onBindViewHolder(holder: StoresVH, position: Int) =
         holder.bind(shops[position])
 
     override fun getItemCount(): Int = shops.size
 
 
-    class ShopsVH(
+    class StoresVH(
         view: View,
         listener: OnShopClickListener
     ) : RecyclerView.ViewHolder(view) {
@@ -40,19 +40,18 @@ class ShopAdapter (
         private val itemPrice = view.findViewById<TextView>(R.id.itemPrice)
         private val itemAvailable = view.findViewById<TextView>(R.id.itemAvailable)
         private val itemDelivery = view.findViewById<TextView>(R.id.itemDelivery)
-        private lateinit var shop: Shop
+        private lateinit var stores: Stores
 
         init {
-            view.setOnClickListener { listener(shop) }
+            view.setOnClickListener { listener(stores) }
         }
 
-        fun bind(shop: Shop) {
-            this.shop = shop
-            nameShop.text = shop.shopName
-            itemPrice.text = shop.price
-            itemAvailable.text = shop.available
-            itemDelivery.text = shop.delivery
-            imageShop.setImageResource(shop.im_shopID)
+        fun bind(stores: Stores) {
+            this.stores = stores
+            nameShop.text = stores.nameShop
+            itemPrice.text = stores.price
+            itemAvailable.text = stores.available
+            itemDelivery.text = stores.delivery
         }
     }
 }
