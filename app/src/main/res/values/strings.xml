@@ -14,5 +14,6 @@
     <string name="Profile">Профиль</string>
     <string name="Phone">+7 800 555 35 35</string>
     <string name="Enter">Применить</string>
+    <string name="error">Возникла ошибка!!!</string>
 
 </resources>

@@ -6,7 +6,10 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
+import com.bumptech.glide.load.resource.bitmap.TransformationUtils.centerCrop
 import com.example.audiophile.R
+import com.example.audiophile.fragments.HeadphonesFragment
 import com.example.audiophile.model.Headphone
 
 typealias OnHeadphoneClickListener = (Headphone) -> Unit
@@ -35,7 +38,7 @@ class HeadphoneAdapter (
         listener: OnHeadphoneClickListener
     ) : RecyclerView.ViewHolder(view) {
 
-        private val iconHP = view.findViewById<ImageView>(R.id.imageProduct)
+        private val iconURL= view.findViewById<ImageView>(R.id.imageProduct)
         private val nameProduct = view.findViewById<TextView>(R.id.nameProduct)
         private val descProduct = view.findViewById<TextView>(R.id.descProduct)
         private lateinit var headphone: Headphone
@@ -46,9 +49,14 @@ class HeadphoneAdapter (
 
         fun bind(headphone: Headphone) {
             this.headphone = headphone
-            nameProduct.text = headphone.model
+            nameProduct.text = headphone.product.model
             descProduct.text = headphone.description
-            iconHP.setImageResource(headphone.im_modelID)
+            Glide
+                .with(itemView)
+                .load(headphone.product.iconUrl)
+                .centerCrop()
+                .placeholder(R.drawable.image_icon)
+                .into(iconURL)
         }
     }
 }
