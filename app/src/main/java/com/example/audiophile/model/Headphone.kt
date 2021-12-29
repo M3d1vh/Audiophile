@@ -4,7 +4,7 @@ import kotlinx.serialization.Serializable
 
 @Serializable
 data class Headphone(
-    val model: Product,
+    val product: Product,
     val description: String
 )
 

@@ -4,6 +4,6 @@ import kotlinx.serialization.Serializable
 
 @Serializable
 data class Product(
-    val iconURL: String,
-    val nameModel : String,
+    val model : String,
+    val iconUrl: String
 )

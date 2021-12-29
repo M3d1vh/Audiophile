@@ -5,6 +5,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.example.audiophile.R
 import com.example.audiophile.model.Review
 
@@ -47,7 +48,7 @@ class ReviewAdapter (
 
         fun bind(review: Review) {
             this.review = review
-            userName.text = review.User.name
+            userName.text = review.user.name
             dateReview.text = review.date
             useTime.text = review.useTime
             dignity.text = review.dignity

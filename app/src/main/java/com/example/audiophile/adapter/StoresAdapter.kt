@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.example.audiophile.R
 import com.example.audiophile.model.Stores
 
@@ -52,6 +53,12 @@ class StoresAdapter (
             itemPrice.text = stores.price
             itemAvailable.text = stores.available
             itemDelivery.text = stores.delivery
+            Glide
+                .with(itemView)
+                .load(stores.iconShopURL)
+                .centerCrop()
+                .placeholder(R.drawable.image_icon)
+                .into(imageShop)
         }
     }
 }

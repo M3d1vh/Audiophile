@@ -20,6 +20,7 @@ class HeadphonesFragment : Fragment(R.layout.fragment_headphones) {
     private lateinit var binding: FragmentHeadphonesBinding
 
     private val coroutineExceptionHandler = CoroutineExceptionHandler{ context,exception ->
+        exception.printStackTrace()
         binding.progressBar.visibility = GONE
         binding.rvHeadphones.adapter =
             HeadphoneAdapter(listOf()) {}

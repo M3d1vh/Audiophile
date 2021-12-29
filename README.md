@@ -50,5 +50,8 @@ lab11)
 4. Переделал лабу 10, теперь json и запросы разные
 5. Добавил во все модели аннотацию @Serializable
 6. Создал пакет network с файлами RestApi и NetworkService (со всеми необходимыми запросами и командами)
-7.
+7. Добавил в вёрстку SwipeRefreshLayout и ProgressBar
+8. Создал CoroutineScope и реализовал coroutineExceptionHandler
+9. Реализовал вызов сетевого запроса и установку данных
+
 
