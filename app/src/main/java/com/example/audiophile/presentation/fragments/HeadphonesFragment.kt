@@ -1,31 +1,31 @@
-package com.example.audiophile.fragments
+package com.example.audiophile.presentation.fragments
 
 
 import android.os.Bundle
 import android.view.View
-import android.view.View.GONE
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.audiophile.R
-import com.example.audiophile.ScreenState
-import com.example.audiophile.adapter.HeadphoneAdapter
+import com.example.audiophile.presentation.ScreenState
+import com.example.audiophile.presentation.adapter.HeadphoneAdapter
 import com.example.audiophile.databinding.FragmentHeadphonesBinding
-import com.example.audiophile.model.Headphone
-import com.example.audiophile.network.NetworkService
+import com.example.audiophile.domain.model.Headphone
+import com.example.audiophile.data.network.NetworkService
 import com.example.audiophile.onClickFlow
 import com.example.audiophile.onRefreshFlow
-import com.google.android.material.snackbar.Snackbar
+import com.example.audiophile.presentation.MainActivity
+import com.example.audiophile.presentation.viewmodel.HPViewModel
 import kotlinx.coroutines.*
 import kotlinx.coroutines.flow.*
-import java.util.Collections.replaceAll
 import kotlinx.serialization.ExperimentalSerializationApi as ExperimentalSerializationApi
 
 @ExperimentalCoroutinesApi
 @ExperimentalSerializationApi
 class HeadphonesFragment : Fragment(R.layout.fragment_headphones)  {
 private lateinit var binding: FragmentHeadphonesBinding
+    private val HPViewModel by lazy { HPViewModel(requireContext(), lifecycleScope) }
 
     companion object{
         fun newInstance() = HeadphonesFragment()
@@ -64,7 +64,7 @@ private lateinit var binding: FragmentHeadphonesBinding
         )
             .flatMapLatest{loadHeadphone()}
             .distinctUntilChanged()
-            .onEach{
+            HPViewModel.screenState.onEach{
                 when(it){
                     is ScreenState.DataLoaded -> {
                         setLoading(false)
@@ -83,6 +83,17 @@ private lateinit var binding: FragmentHeadphonesBinding
                 }
             }
             .launchIn(lifecycleScope)
+
+        if(savedInstanceState == null) {
+            HPViewModel.loadData()
+        }
+        binding.swRefreshHP.setOnRefreshListener {
+            HPViewModel.loadData()
+        }
+        binding.swRefreshHP.setOnRefreshListener {
+            HPViewModel.loadData()
+        }
+
     }
     @ExperimentalSerializationApi
     private fun loadHeadphone() = flow {
