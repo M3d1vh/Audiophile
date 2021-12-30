@@ -1,4 +1,4 @@
-package com.example.audiophile.fragments
+package com.example.audiophile.presentation.fragments
 
 import android.graphics.Color
 import android.os.Bundle
@@ -6,9 +6,10 @@ import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.audiophile.R
-import com.example.audiophile.adapter.StoresAdapter
+import com.example.audiophile.presentation.adapter.StoresAdapter
 import com.example.audiophile.databinding.FragmentShopsBinding
-import com.example.audiophile.network.NetworkService
+import com.example.audiophile.data.network.NetworkService
+import com.example.audiophile.presentation.MainActivity
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.coroutines.*
 import kotlinx.serialization.ExperimentalSerializationApi

@@ -1,6 +1,5 @@
-package com.example.audiophile.fragments
+package com.example.audiophile.presentation.fragments
 
-import android.app.Activity
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment

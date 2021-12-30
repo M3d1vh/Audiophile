@@ -1,4 +1,4 @@
-package com.example.audiophile.adapter
+package com.example.audiophile.presentation.adapter
 
 import android.view.LayoutInflater
 import android.view.View
@@ -7,10 +7,8 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.bumptech.glide.load.resource.bitmap.TransformationUtils.centerCrop
 import com.example.audiophile.R
-import com.example.audiophile.fragments.HeadphonesFragment
-import com.example.audiophile.model.Headphone
+import com.example.audiophile.domain.model.Headphone
 
 typealias OnHeadphoneClickListener = (Headphone) -> Unit
 

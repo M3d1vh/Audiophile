@@ -1,8 +1,8 @@
-package com.example.audiophile.network
+package com.example.audiophile.data.network
 
-import com.example.audiophile.model.Headphone
-import com.example.audiophile.model.Review
-import com.example.audiophile.model.Stores
+import com.example.audiophile.domain.model.Headphone
+import com.example.audiophile.domain.model.Review
+import com.example.audiophile.domain.model.Stores
 import retrofit2.http.GET
 
 interface RestApi {
