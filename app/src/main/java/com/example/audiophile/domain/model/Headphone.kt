@@ -1,4 +1,4 @@
-package com.example.audiophile.model
+package com.example.audiophile.domain.model
 
 import kotlinx.serialization.Serializable
 

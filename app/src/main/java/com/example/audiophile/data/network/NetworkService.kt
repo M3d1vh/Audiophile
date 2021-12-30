@@ -1,4 +1,4 @@
-package com.example.audiophile.network
+package com.example.audiophile.data.network
 
 import com.jakewharton.retrofit2.converter.kotlinx.serialization.asConverterFactory
 import kotlinx.serialization.ExperimentalSerializationApi

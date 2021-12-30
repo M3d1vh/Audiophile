@@ -1,4 +1,4 @@
-package com.example.audiophile.fragments
+package com.example.audiophile.presentation.fragments
 
 import android.os.Bundle
 import android.view.View

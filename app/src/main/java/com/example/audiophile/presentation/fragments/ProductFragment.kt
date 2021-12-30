@@ -1,13 +1,11 @@
-package com.example.audiophile.fragments
+package com.example.audiophile.presentation.fragments
 
-import android.app.Activity
 import android.os.Bundle
 import android.view.View
-import androidx.annotation.DrawableRes
-import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import com.example.audiophile.R
 import com.example.audiophile.databinding.FragmentProductBinding
+import com.example.audiophile.presentation.MainActivity
 
 class ProductFragment : Fragment(R.layout.fragment_product) {
     companion object{

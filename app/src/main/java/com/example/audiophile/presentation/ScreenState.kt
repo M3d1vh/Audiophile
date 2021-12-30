@@ -1,6 +1,6 @@
-package com.example.audiophile
+package com.example.audiophile.presentation
 
-import com.example.audiophile.model.Headphone
+import com.example.audiophile.domain.model.Headphone
 
 sealed class ScreenState {
     data class DataLoaded(val headphones: List<Headphone>) : ScreenState()
