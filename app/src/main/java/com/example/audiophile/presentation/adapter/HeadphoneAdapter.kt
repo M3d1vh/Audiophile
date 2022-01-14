@@ -47,11 +47,11 @@ class HeadphoneAdapter (
 
         fun bind(headphone: Headphone) {
             this.headphone = headphone
-            nameProduct.text = headphone.product.model
+            nameProduct.text = headphone.model
             descProduct.text = headphone.description
             Glide
                 .with(itemView)
-                .load(headphone.product.iconUrl)
+                .load(headphone.iconUrl)
                 .centerCrop()
                 .placeholder(R.drawable.image_icon)
                 .into(iconURL)
