@@ -24,6 +24,7 @@ class HPViewModel (
 
     @ExperimentalSerializationApi
     fun loadData() {
+        job?.cancel()
         job = coroutineScope.launch {
             try{
                 _screenState.value = ScreenState.Loading
